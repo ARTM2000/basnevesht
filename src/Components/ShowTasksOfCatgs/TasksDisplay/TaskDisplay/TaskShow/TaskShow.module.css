@@ -1,0 +1,13 @@
+.TaskListItem {
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+}
+
+.TaskListItemIsDone {
+    cursor: pointer;
+    text-decoration: line-through;
+    color: #b3b3b3;
+    padding: 0;
+    margin: 0;
+}

@@ -1,0 +1,76 @@
+.CatgButton {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    /* float: left; */
+    text-align: center;
+    width: 23.7%;
+    /* width: 23.7%; */
+    height: 80px;
+    /* max-height: 100px; */
+    margin: 5px 5px;
+    padding: 0;
+    color: #d9212c;
+    border: 2px solid #d9212c;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.5 ease-out;
+    animation: btnOnBlur 0.5s none;
+}
+
+.NameContainer{
+    /* box-sizing: border-box; */
+    margin: 5px auto;
+    padding: 0px 10px;
+    position: relative;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    /* display: flex; */
+    /* flex-wrap: wrap;
+    flex-direction: column; */
+    height: auto;
+    text-align: right;
+    text-align-last: right;
+}
+
+.CatgButton:hover {
+    animation: btnOnHover 0.5s none;
+    background-color: #d9212c;
+    color: #fbfaf9;
+}
+
+.CatgName {
+    /* display: -webkit-box;
+    -webkit-line-clamp: 2;
+    white-space: pre-wrap; */
+    /* white-space: pre-wrap; */
+    word-break: break-all;
+    word-wrap: break-word;
+    margin: 2px 2px;
+    font-size: 16.5px;
+}
+
+@keyframes btnOnHover {
+    0%{
+       color: #d9212c;
+       border: 2px solid #d9212c;
+    }
+
+    100%{
+        background-color: #d9212c;
+        color: #fbfaf9;
+    }
+}
+
+@keyframes btnOnBlur {
+    0% {
+        background-color: #d9212c;
+        color: #fbfaf9;
+    }
+
+    100% {
+        color: #d9212c;
+        border: 2px solid #d9212c;
+    }
+}

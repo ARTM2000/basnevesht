@@ -1,0 +1,21 @@
+@font-face{
+  src: url(./assets/fonts/regular/IRANSansRegular.ttf);
+  font-family: Iransans;
+}
+@font-face{
+  src: url(./assets/fonts/regular/IRANSansRegular.woff);
+  font-family: Iransans;
+}
+@font-face{
+  src: url(./assets/fonts/regular/IRANSansRegular.eot);
+  font-family: Iransans;
+}
+
+*{
+  font-family: 'Iransans';
+}
+
+body {
+  margin: 0;
+  padding:0;
+}

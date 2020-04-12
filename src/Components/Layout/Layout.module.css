@@ -1,0 +1,16 @@
+.Layout {
+    background-color: #fbfaf9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    z-index: 90;
+    direction: rtl;
+}
+
+.NavBar {
+    float: right;
+    background-color: #d9212c;
+    width: 4vw;
+    height: 100vh;
+    text-align: center;
+}

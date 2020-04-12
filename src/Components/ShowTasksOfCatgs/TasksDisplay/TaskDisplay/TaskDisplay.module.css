@@ -1,0 +1,107 @@
+.TaskCard {
+    display: block;
+    float: right;
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+    padding: 10px 15px;
+    margin: 10px 10px;
+    background-color: #ffee51;
+    color: rgb(95, 95, 95);
+    border-radius: 5px;
+    border: 1px solid transparent;
+    text-align: right;
+    box-shadow: 0px 4px 6px rgb(170, 170, 170);
+
+    animation: all 1s linear;
+    animation: toLookNotDone 0.25s linear;
+}
+
+.TaskCardDone {
+    display: block;
+    float: right;
+    box-sizing: border-box;
+    height: auto;
+    width: auto;
+    padding: 10px 15px;
+    margin: 10px 10px;
+    background-color: rgb(241, 241, 241);
+    color: #b3b3b3;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    text-align: right;
+    box-shadow: 0px 4px 6px rgba(170, 170, 170);
+
+    animation: all 1s linear;
+    animation: toLookDone 0.25s linear;
+}
+
+@keyframes toLookNotDone {
+    0%{
+        background-color: rgb(241, 241, 241);
+        color: #b3b3b3;
+    }
+
+    100% {
+        background-color: #ffee51;
+        color: rgb(95, 95, 95);
+    }
+}
+
+@keyframes toLookDone {
+    0%{
+        background-color: #ffee51;
+        color: rgb(95, 95, 95);
+    }
+    100%{
+        background-color: rgb(241, 241, 241);
+        color: #b3b3b3;
+    }
+}
+
+
+.TaskContainer {
+    padding: 0 20px;
+}
+
+.TaskCard hr {
+    border: 1px solid #ffb700;
+}
+
+.TaskCardDone hr {
+    border-color: #b3b3b3;
+}
+
+.TaskCardDone .TitleContainer h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+.TaskCard .TitleContainer h3 {
+    margin: 0px;
+    color: #ffb700;
+}
+
+.TaskCard.TitleContainer {
+    background-color: #fff494;
+    padding: 5px 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.DeleteTaskBtnAble {
+    outline: none;
+    cursor: pointer;
+    background-color: #b3b3b3;
+    color: rgb(241, 241, 241);
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    padding: 0px 10px;
+    margin: 5px auto;
+    width: 100%;
+}
+
+.DeleteTaskBtnAble:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px 6px rgb(192, 192, 192);
+}

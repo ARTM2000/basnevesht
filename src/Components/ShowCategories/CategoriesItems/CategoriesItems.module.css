@@ -1,0 +1,21 @@
+.ContainerCatg {
+    box-sizing: border-box;
+    position: relative;
+    direction: rtl;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 43px;
+    margin: 10px auto;
+    text-align: center;
+    align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.CategoriesListTitle {
+    direction: rtl;
+    text-align: right;
+    display: block;
+    margin: 5px 50px;
+    color: #D9212C;
+}

@@ -1,0 +1,29 @@
+.Spinner {
+    display: inline-block;
+    position: absolute;
+    left: 31.7%;
+    width: auto;
+    height: auto;
+}
+
+.Spinner:after {
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 4px solid #D9212C;
+    border-color: #D9212C transparent #D9212C transparent;
+    animation: rotating 1s linear infinite;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

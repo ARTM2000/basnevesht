@@ -1,0 +1,133 @@
+.Main{
+    
+    /* float: right; */
+    width: 29vw;
+    /* position: absolute; */
+    top: 0;
+    right: 5vw;
+    height: 100vh;
+    background-color: #d9d9d9;
+}
+
+.Header {
+    direction: rtl;
+    margin: 20px 35px;
+}
+
+.AddingPart{
+    position: relative;
+    margin: 20px auto 10px auto;
+    padding: 10px;
+    width: 23vw;
+    height: auto;
+    border-radius: 5px;
+    border-color: transparent;
+    box-shadow: 0px 4px 6px rgb(173, 173, 173);
+    background-color: #ffee51;
+    animation: all 0.5s linear;
+    direction: rtl;
+}
+
+.Title{
+    position: relative;
+    padding: 5px 10px;
+    background-color: #fff494;
+    border-color: transparent;
+    border-radius: 5px;
+    color: #ffb700;
+    font-size: 1.1em;
+    width: 93%;
+    
+    /* max-width: 300px; */
+    /* font-weight: bold; */
+}
+
+.Title::placeholder {
+    color: #ffb700;
+    opacity: 1;
+}
+
+.Title:focus {
+    outline: none;
+}
+
+.CatgControl{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px auto 0px auto;
+    
+}
+
+.Categories {
+    position: relative;
+    margin-left: 0px;
+    left: 0;
+    top: 0;
+    font-size: 1.05em;
+    border-radius: 5px;
+    width: 45%;
+    background-color: #fff494;
+    color: #ffb700;
+    padding: 20px auto;
+    border: 0 solid transparent;
+}
+
+.Categories:focus {
+    outline: none;
+}
+
+.Categories:hover{
+    cursor: pointer;
+}
+
+.AddCatg {
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0px auto;
+    left: 0;
+    top: 0;
+    font-size: 1.05em;
+    border-radius: 5px;
+    width: auto;
+    background-color: transparent;
+    border:1px solid #ffb700;
+    color: #ffb700;
+    padding: 3px 10px;
+    border: 0 solid transparent;
+}
+
+.AddCatg:hover {
+    cursor: pointer;
+}
+
+.Option {
+    display: block;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Iransans';
+}
+
+.Divider {
+    border: 1px solid #ffb700;
+}
+
+.StoreIt {
+    margin: 5px auto;
+    width: 100%;
+    padding: 3px 20px;
+    border-radius: 5px;
+    border-color: #ffb700;
+    border-style: unset;
+    background-color: #fff494;
+    color: #ffb700;
+    font-size: 1.05em;
+    outline: none;
+}
+
+.StoreIt:hover {
+    cursor: pointer;
+    outline: none;
+}
