@@ -8,9 +8,9 @@ const intialState = {
       title: "درس اقتصاد مهندسی",
       taskCardDone: false,
       task: [
-        { detail: "جمع آوری اطاعات", done: false },
+        { detail: "جمع آوری اطلاعات", done: false },
+        { detail: "مطرح کردن جزئیات با هم گروهی ها", done: false },
         { detail: "صحبت کردن با استاد درباره پروژه", done: false },
-        { detail: "مطرح کردن جزئیات با هم گروهی ها", done: false }
       ]
     }
   ]
@@ -49,14 +49,14 @@ const reducer = (state = intialState, action) => {
             let isDone = true;
             tasksSample.task.map(el => {
               isDone = isDone && el.done;
-              return null;
+              return el;
             })
 
             if (isDone) {
               tasksSample.taskCardDone = true;
               //---------------Change the index of doneCard----------------
               // let tool = tasksSample.task[action.taskIndex];
-              console.log('taskDone!')
+              // console.log('taskDone!')
             }else {
               tasksSample.taskCardDone = false;
             }

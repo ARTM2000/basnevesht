@@ -40,7 +40,7 @@ class Dashboard extends Component {
         // this.setState({ espesifiedTask: this.props.CatgTask });
         this.setState({ loading: true });
       }
-      console.log("checked!");
+      // console.log("checked!");
       count++;
     }, 2000);
   }
@@ -89,7 +89,7 @@ class Dashboard extends Component {
       let taskCardSample = [ ...this.state.newTask.task ]
       let taskRowsSample = [...this.state.taskRows];
       taskCardSample.splice(index, 1);
-      console.log(taskCardSample);
+      // console.log(taskCardSample);
       taskRowsSample.splice(index, 1);
       this.setState({ newTask:{
         ...this.state.newTask,
@@ -105,9 +105,9 @@ class Dashboard extends Component {
       this.state.newTask.title,
       this.state.newTask.task
     );
-    console.log(this.state.newTask.title);
-    console.log(this.state.newTask.category);
-    console.log(this.state.newTask.task);
+    // console.log(this.state.newTask.title);
+    // console.log(this.state.newTask.category);
+    // console.log(this.state.newTask.task);
     let newTaskCleaning = { ...this.state.newTask };
     newTaskCleaning.task = [{ detail: "" }];
     newTaskCleaning.title = "";
@@ -129,7 +129,7 @@ class Dashboard extends Component {
     }
     this.setState({ newCatg: "" });
     this.onAddnewTag();
-    console.log(this.props.ctagS);
+    // console.log(this.props.ctagS);
   };
 
   render() {
@@ -159,7 +159,7 @@ class Dashboard extends Component {
           onAddCatgMode={this.onAddnewTag}
           findCatgFilled={this.props.catgRequested}
           submitAlerm={this.state.submitAlerm}
-          changeSubmitAlerm={(alerm) => this.setState({submitAlerm : alerm})}
+          changeSubmitAlerm={(alarm) => this.setState({submitAlerm : alarm})}
         />
         {this.props.catgRequested ? (
           <ShowTaskOfCatg
@@ -176,6 +176,7 @@ class Dashboard extends Component {
           <ShowCategories
             allTasks={this.props.allTasks}
             ctagS={this.props.ctagS}
+            //should request to the db by on "onSearchingCatg"
             onSearchingCatg={this.props.onSearchingCatg}
             onFilteringTasks={this.props.onFilteringTasks}
           />
@@ -199,31 +200,28 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-      newCategory: newCatg =>
+      newCategory: (newCatg) =>
         dispatch({ type: action.CREATE_CATEGORY, catg: newCatg }),
       setTask: (ctag, title, task) =>
         dispatch({
           type: action.CREATE_TASK,
           catg: ctag,
           title: title,
-          task: task
+          task: task,
         }),
-      updateCatgTasks: allTasks =>
+      updateCatgTasks: (allTasks) =>
         dispatch({ type: action.FIND_AND_STORE_CATG_TASK, allTasks: allTasks }),
       deleteFindCatg: () => dispatch({ type: action.ON_DELETE_FIND_ITEM_CATG }),
-      onSearchingCatg: catg =>
+      //should request to the db by on "onSearchingCatg"
+      onSearchingCatg: (catg) =>
         dispatch({ type: action.ON_SEARCH_TASKS, findCatg: catg }),
-      onFilteringTasks: allTasks =>
+      onFilteringTasks: (allTasks) =>
         dispatch(actionFunc.onFilteringTasks(allTasks)),
       onChangeTaskItemPos: (cardIndex, taskIndex, allTasks) =>
         dispatch(
-          actionFunc.onManagingEspecifiedTask(
-            cardIndex,
-            taskIndex,
-            allTasks
-          )
+          actionFunc.onManagingEspecifiedTask(cardIndex, taskIndex, allTasks)
         ),
-      onDeleteCard: cardIndex => dispatch(actionFunc.onDeleteTask(cardIndex))
+      onDeleteCard: (cardIndex) => dispatch(actionFunc.onDeleteTask(cardIndex)),
     };
 }
 

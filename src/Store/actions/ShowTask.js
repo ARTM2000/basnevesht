@@ -27,11 +27,11 @@ export const onManagingEspecifiedTask = (cardIndex, taskIndex, allTask) => {
          .then((res) => {
              if (allTask[cardIndex].taskCardDone && res) {
                dispatch(onArrangingCard(cardIndex));
-               console.log("rearanged!");
+            //    console.log("rearanged!");
              }
          }).then(() => {
              dispatch(onFilteringTasks(allTask));
-             console.log("refiltered!");
+            //  console.log("refiltered!");
          })
        };
 
