@@ -77,3 +77,13 @@
         border: 2px solid #d9212c;
     }
 }
+
+@media(max-width: 425px) {
+    .CatgButton{
+        width: 46%;
+        height: auto;
+    }
+    .CatgName{
+        font-size: 19px;
+    }
+}

@@ -1,55 +1,75 @@
 .RowInput {
-    display: block;
-    margin: 5px auto;
+  display: block;
+  margin: 5px auto;
 }
 
 .TaskKeeper {
-    padding: 15px auto;
-    width: 100%;
+  padding: 15px auto;
+  width: 100%;
+  display: flex; 
 }
 
 .IconContainer {
-    position: relative;
-    
-    display: inline-block;
-    margin: 10px 5px;
-    width: 16px;
-    height: 16px;
-    /* background-color: #fff494; */
-    border-radius: 5px;
+  position: relative;
+
+  display: inline-block;
+  margin: 10px 5px;
+  width: 16px;
+  height: 16px;
+  /* background-color: #fff494; */
+  border-radius: 5px;
 }
 
 .Icon {
-    box-sizing: border-box;
-    position: relative;
-    margin: auto;
-    height: 100%;
+  box-sizing: border-box;
+  position: relative;
+  margin: auto;
+  height: 100%;
 }
 
-.Icon:hover{
-    cursor: pointer;
+.Icon:hover {
+  cursor: pointer;
 }
 
 .Task {
-    position: relative;
-    padding-bottom: 5px;
-    background-color: transparent;
-    border-color: transparent;
-    color: black;
-    font-size: 1.1em;
-    width: 81%;
+  position: relative;
+  padding-bottom: 5px;
+  background-color: transparent;
+  border-color: transparent;
+  color: black;
+  font-size: 1.1em;
+  width: 81%;
 }
 
 .FirstTask {
-    position: relative;
-    padding-bottom: 5px;
-    background-color: transparent;
-    border-color: transparent;
-    color: black;
-    font-size: 1.1em;
-    width: 89.5%;
+  position: relative;
+  padding-bottom: 5px;
+  background-color: transparent;
+  border-color: transparent;
+  color: black;
+  font-size: 1.1em;
+  width: 89.5%;
 }
 
 .Task:focus {
-    outline: none;
+  outline: none;
+}
+
+.TaskController {
+  width: auto;
+  /* margin: 0 auto; */
+  margin-right: auto;
+  margin-left: unset;
+}
+
+@media (max-width: 425px) {
+  .TaskKeeper {
+    display: flex;
+  }
+  .FirstTask {
+    width: 88.3%;
+  }
+  .Task {
+    width: 78.5%;
+  }
 }

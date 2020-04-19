@@ -4,7 +4,7 @@
     box-sizing: border-box;
     background-color: #ffffff;
     height: 100vh;
-    width: 67vw;
+    width: 75vw;
     padding: 10px 10px;
     align-items: center;
     text-align: center;
@@ -46,4 +46,27 @@
     margin: 5px auto;
     height: auto;
     width: auto;
+}
+
+@media(max-width: 425px) {
+    .Main{
+        display: block;
+        width: 100%;
+        height: auto;
+        overflow-y: auto;
+    }
+    .Header {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .BackToCatgs {
+        position: relative;
+        width: auto;
+        margin-top: 18px;
+        margin-left: 5%;
+        margin-right: auto;
+    }
+    .TasksContainers {
+        padding: 0 5%;
+    }
 }

@@ -1,0 +1,12 @@
+.App {
+  /* text-align: center; */
+}
+.Sign {
+  display: block;
+  padding-left: 15px;
+}
+
+.Sign p {
+  font-family: sans-serif;
+  font-size: 12px;
+}

@@ -1,4 +1,5 @@
 .Layout {
+    height: 93vh;
     background-color: #fbfaf9;
     margin: 0;
     padding: 0;
@@ -13,4 +14,14 @@
     width: 4vw;
     height: 100vh;
     text-align: center;
+}
+
+@media(max-width: 425px) {
+    .Layout{
+        overflow-x: scroll;
+        display: block;
+    }
+    .NavBar{
+        display: none;
+    }
 }

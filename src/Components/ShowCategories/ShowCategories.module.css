@@ -4,7 +4,7 @@
     box-sizing: border-box;
     background-color: #ffffff;
     height: 100vh;
-    width: 67vw;
+    width: 75vw;
     padding: 120px auto;
     align-items: center;
     text-align: center;
@@ -28,3 +28,17 @@
     font-size: 1em;
 }
 
+@media(max-width: 425px) {
+    .Main {
+        display: block;
+        width: 100%;
+        height: 47vh;
+        overflow-y: auto;
+        /* height: auto; */
+        /* min-height: 660px; */
+    }
+    .container {
+        margin: 20px 5px;
+        padding: 2px ;
+    }
+}

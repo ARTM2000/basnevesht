@@ -34,6 +34,9 @@ const addCategories = (props) => {
           <button className={StyleSheet.Cancel} onClick={onSubmitForCancel}>
             لغو
           </button>
+          <p className={StyleSheet.Alarm}>
+            {props.alarm}
+          </p>
         </form>
       </div>
     );

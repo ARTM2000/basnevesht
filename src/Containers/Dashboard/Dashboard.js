@@ -22,6 +22,7 @@ class Dashboard extends Component {
     espesifiedTask: null,
     loading: true,
     submitAlerm: null,
+    catgAddAlarm: null,
   };
 
   componentDidMount() {
@@ -70,12 +71,22 @@ class Dashboard extends Component {
     this.setState({ newTask: newWork });
   };
 
-  onAddnewTag = () => {
-    this.setState(prevState => {
-      return {
-        addCatg: !prevState.addCatg
-      };
-    });
+  onAddnewTag = (mode) => {
+    if(mode) {
+      setTimeout(() => {
+        this.setState((prevState) => {
+          return {
+            addCatg: !prevState.addCatg,
+          };
+        });
+      }, 900)
+    } else {
+      this.setState((prevState) => {
+        return {
+          addCatg: !prevState.addCatg,
+        };
+      });
+    }
   };
 
   addRow = index => {
@@ -124,21 +135,27 @@ class Dashboard extends Component {
   onPublishNewCategories = () => {
     if (this.state.newCatg !== "") {
       this.props.newCategory(this.state.newCatg);
+      this.onAddnewTag(this.state.newCatg === ""); //boolean for mode controlling
+      return this.setState({ newCatg: "" });
     } else {
-      alert("مشکلی برای ایجاد دسته بندی بوجود آمده است");
+      this.setState({catgAddAlarm: "نام وارد شده معتبر نیست"});
+      setTimeout(() => {
+        this.setState({catgAddAlarm: null});
+      }, 1000)
     }
+    this.onAddnewTag(this.state.newCatg === "");//boolean for mode controlling
     this.setState({ newCatg: "" });
-    this.onAddnewTag();
     // console.log(this.props.ctagS);
   };
 
   render() {
     return (
       <React.Fragment>
-        <Modal showP={this.state.addCatg} modalClosed={this.onAddnewTag}>
+        <Modal showP={this.state.addCatg} modalClosed={() => this.onAddnewTag(false)}>
           <AddCategories
             NewCatg={this.onSaveNewCatg}
             Add={this.onPublishNewCategories}
+            alarm={this.state.catgAddAlarm}
             Cancel={this.onAddnewTag}
             NewCatgValue={this.state.newCatg}
           />
