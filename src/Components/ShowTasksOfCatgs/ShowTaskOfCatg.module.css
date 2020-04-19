@@ -52,7 +52,7 @@
     .Main{
         display: block;
         width: 100%;
-        height: auto;
+        height: 47vh;
         overflow-y: auto;
     }
     .Header {
